@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كرار حيدر</title>
+    <title>كرار حيدر - روابط</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -38,6 +38,20 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+        }
+
+        /* شعار جديد */
+        .logo {
+            margin-bottom: 15px;
+            width: 180px;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
         }
 
         .header {
@@ -96,7 +110,7 @@
             gap: 20px;
             margin-bottom: 30px;
             width: 100%;
-            align-items: center; /* توسيط الأزرار */
+            align-items: center;
         }
 
         .link-button {
@@ -110,7 +124,7 @@
             text-decoration: none;
             color: #000;
             font-weight: 700;
-            font-size: 20px; /* زيادة حجم الخط */
+            font-size: 20px;
             transition: all 0.4s ease;
             box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.8), 
@@ -118,7 +132,7 @@
             position: relative;
             overflow: hidden;
             transform: translateZ(0);
-            width: 85%; /* تقليل طول الأزرار بنسبة 15% */
+            width: 85%;
         }
 
         .link-button::before {
@@ -127,7 +141,8 @@
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;background: linear-gradient(145deg, transparent, rgba(255, 255, 255, 0.1));
+            bottom: 0;
+            background: linear-gradient(145deg, transparent, rgba(255, 255, 255, 0.1));
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -153,14 +168,14 @@
         .link-text {
             display: flex;
             align-items: center;
-            gap: 10px; /* تقليل المسافة بين الأيقونة والنص */
-            font-size: 20px; /* زيادة حجم الخط */
+            gap: 10px;
+            font-size: 20px;
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
         }
 
         /* Styling for Font Awesome icons */
         .platform-icon .fab {
-            font-size: 25px; /* زيادة حجم الأيقونات */
+            font-size: 25px;
             filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
             color: inherit;
         }
@@ -211,6 +226,9 @@
             .container {
                 padding: 0 15px;
             }
+            .logo {
+                width: 150px;
+            }
             .title {
                 font-size: 36px;
             }
@@ -221,11 +239,11 @@
             .link-button {
                 padding: 16px 22px;
                 font-size: 18px;
-                width: 85%; /* تقليل طول الأزرار في الجوال */
+                width: 85%;
             }
             .link-text {
                 font-size: 18px;
-                gap: 8px; /* تقليل المسافة في الجوال */
+                gap: 8px;
             }
             .platform-icon .fab {
                 font-size: 22px;
@@ -233,6 +251,9 @@
         }
 
         @media (max-width: 360px) {
+            .logo {
+                width: 130px;
+            }
             .title {
                 font-size: 32px;
             }
@@ -243,11 +264,11 @@
             .link-button {
                 padding: 14px 18px;
                 font-size: 16px;
-                width: 85%; /* تقليل طول الأزرار في الشاشات الصغيرة */
+                width: 85%;
             }
             .link-text {
                 font-size: 16px;
-                gap: 7px; /* تقليل المسافة في الشاشات الصغيرة */
+                gap: 7px;
             }
             .platform-icon .fab {
                 font-size: 20px;
@@ -257,6 +278,11 @@
 </head>
 <body>
     <div class="container">
+        <!-- إضافة الشعار الجديد -->
+        <img src="https://i.ibb.co/v6hgRzkr/image.png" 
+             alt="شعار كرار حيدر" 
+             class="logo">
+        
         <div class="header">
             <h1 class="title">كرار حيدر</h1>
             <!-- الصورة الشخصية فقط -->
