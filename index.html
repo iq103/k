@@ -27,7 +27,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
         }
 
         .container {
@@ -41,23 +40,6 @@
             text-align: center;
         }
 
-        /* شعار في أعلى اليمين */
-        .top-logo {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 70px;
-            height: auto;
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-
-        .top-logo:hover {
-            transform: scale(1.05) rotate(5deg);
-            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
-        }
-
         .header {
             text-align: center;
             margin-bottom: 40px;
@@ -65,7 +47,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            position: relative;
         }
 
         .title {
@@ -202,12 +183,45 @@
             background: linear-gradient(145deg, #ffeeee, #ffe0e0);
         }
 
+        /* الشعار الجديد فوق حقوق الطبع والنشر */
+        .logo-container {
+            margin: 25px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-link {
+            display: inline-block;
+            transition: all 0.4s ease;
+        }
+
+        .logo {
+            width: 160px;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            transition: all 0.4s ease;
+        }
+
+        .logo-link:hover .logo {
+            transform: scale(1.08) rotate(5deg);
+            filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.4));
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .logo-link:active .logo {
+            transform: scale(0.98);
+        }
+
         .footer {
             text-align: center;
             color: white;
             font-size: 16px;
             font-weight: 500;
-            margin-top: 30px;
+            margin-top: 5px;
             padding: 10px 0;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
             width: 100%;
@@ -231,11 +245,6 @@
             .container {
                 padding: 0 15px;
             }
-            .top-logo {
-                width: 60px;
-                top: 15px;
-                right: 15px;
-            }
             .title {
                 font-size: 36px;
             }
@@ -255,14 +264,12 @@
             .platform-icon .fab {
                 font-size: 22px;
             }
+            .logo {
+                width: 140px;
+            }
         }
 
         @media (max-width: 360px) {
-            .top-logo {
-                width: 50px;
-                top: 10px;
-                right: 10px;
-            }
             .title {
                 font-size: 32px;
             }
@@ -282,15 +289,13 @@
             .platform-icon .fab {
                 font-size: 20px;
             }
+            .logo {
+                width: 120px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- الشعار في أعلى اليمين -->
-    <img src="https://i.ibb.co/v6hgRzkr/image.png" 
-         alt="شعار كرار حيدر" 
-         class="top-logo">
-    
     <div class="container">
         <div class="header">
             <h1 class="title">كرار حيدر</h1>
@@ -330,9 +335,29 @@
             </a>
         </div>
 
+        <!-- الشعار الجديد فوق حقوق الطبع والنشر -->
+        <div class="logo-container">
+            <a href="#" class="logo-link">
+                <img src="https://i.ibb.co/v6hgRzkr/image.png" 
+                     alt="شعار كرار حيدر" 
+                     class="logo">
+            </a>
+        </div>
+
         <div class="footer">
             جميع الحقوق محفوظة 2025©️
         </div>
     </div>
+
+    <script>
+        // جعل الشعار يعيد المستخدم إلى أعلى الصفحة
+        document.querySelector('.logo-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
