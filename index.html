@@ -27,6 +27,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
 
         .container {
@@ -40,17 +41,20 @@
             text-align: center;
         }
 
-        /* شعار جديد */
-        .logo {
-            margin-bottom: 15px;
-            width: 180px;
+        /* شعار في أعلى اليمين */
+        .top-logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 70px;
             height: auto;
             filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
             transition: all 0.3s ease;
+            z-index: 10;
         }
 
-        .logo:hover {
-            transform: scale(1.05);
+        .top-logo:hover {
+            transform: scale(1.05) rotate(5deg);
             filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
         }
 
@@ -61,6 +65,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
         }
 
         .title {
@@ -226,8 +231,10 @@
             .container {
                 padding: 0 15px;
             }
-            .logo {
-                width: 150px;
+            .top-logo {
+                width: 60px;
+                top: 15px;
+                right: 15px;
             }
             .title {
                 font-size: 36px;
@@ -251,8 +258,10 @@
         }
 
         @media (max-width: 360px) {
-            .logo {
-                width: 130px;
+            .top-logo {
+                width: 50px;
+                top: 10px;
+                right: 10px;
             }
             .title {
                 font-size: 32px;
@@ -277,12 +286,12 @@
     </style>
 </head>
 <body>
+    <!-- الشعار في أعلى اليمين -->
+    <img src="https://i.ibb.co/v6hgRzkr/image.png" 
+         alt="شعار كرار حيدر" 
+         class="top-logo">
+    
     <div class="container">
-        <!-- إضافة الشعار الجديد -->
-        <img src="https://i.ibb.co/v6hgRzkr/image.png" 
-             alt="شعار كرار حيدر" 
-             class="logo">
-        
         <div class="header">
             <h1 class="title">كرار حيدر</h1>
             <!-- الصورة الشخصية فقط -->
